@@ -6,8 +6,11 @@ import Cardapio from "./pages/Cardapio";
 import ProductGallery from "./pages/ProductGallery";
 
 export default function App() {
+  // Vite expõe BASE_URL sempre com barra no final (ex.: "/soleil/")
+  // React Router espera basename sem barra no final (ex.: "/soleil")
+  const basename = (import.meta.env.BASE_URL || "/").replace(/\/+$/, "");
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cardapio" element={<Cardapio />} />
