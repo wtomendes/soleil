@@ -4,14 +4,14 @@ export const catalogDefaults: Record<string, Partial<CatalogMeta>> = {
   'torta-morango': {
     name: 'Torta de Morango',
     description:
-      'Massa leve, creme de baunilha e morangos frescos finalizados com geleia artesanal da Soleil.',
+      'Massa leve, creme soleil e morangos frescos finalizados com geleia artesanal de morango e chantininho.',
     order: 1,
     price: '23,00',
   },
   'torta-de-chocolate-com-base-soleil': {
     name: 'Torta de Chocolate com Base Soleil',
     description:
-      'Base crocante exclusiva da Soleil, recheio cremoso de chocolate meio amargo e cobertura espelhada.',
+      'Base exclusiva da Soleil, recheio cremoso de chocolate meio amargo e cobertura de chantininho.',
     order: 2,
     price: '23,00',
   },
@@ -25,7 +25,7 @@ export const catalogDefaults: Record<string, Partial<CatalogMeta>> = {
   'torta-banoff': {
     name: 'Torta Banoff',
     description:
-      'Clássica banoffee com doce de leite cremoso, bananas caramelizadas e chantilly leve.',
+      'Clássica banoffee com doce de leite cremoso, bananas caramelizadas e chantininho.',
     order: 4,
     price: '23,00',
   },
@@ -39,14 +39,14 @@ export const catalogDefaults: Record<string, Partial<CatalogMeta>> = {
   'bolo-de-brigadeiro-de-doce-de-leite': {
     name: 'Bolo de Brigadeiro de Doce de Leite',
     description:
-      'Camadas macias de bolo úmido com recheio duplo de brigadeiro de doce de leite, decorado com confeitos.',
+      'Camadas macias de bolo úmido com recheio duplo de brigadeiro de doce de leite, decorado com coco queimado.',
     order: 6,
     price: '12,00',
   },
   'bolo-fitness-maca-banana': {
-    name: 'Bolo Fitness Maçã & Banana',
+    name: 'Bolo Fitness Maçã & Banana com nozes',
     description:
-      'Receita leve com farinha integral, maçã e banana frescas, adoçado naturalmente com canela e coberto com chocolate meio amargo.',
+      'Receita leve com farinha de aveia, maçã e banana frescas, adoçado naturalmente com canela e coberto com chocolate meio amargo e nozes.',
     order: 7,
     price: '15,00',
   },
@@ -60,7 +60,7 @@ export const catalogDefaults: Record<string, Partial<CatalogMeta>> = {
   brownies: {
     name: 'Brownies Soleil',
     description:
-      'Brownies úmidos e intensos com mix de chocolates premium e finalização artesanal.',
+      'Brownies úmidos e intensos com mix de chocolates premium e finalização com flores saborizadas a gosto.',
     order: 9,
     price: '12,00',
   },
@@ -72,9 +72,9 @@ export const catalogDefaults: Record<string, Partial<CatalogMeta>> = {
     price: '16,00',
   },
   'cookies-chocolate-cafe-e-recheiochocolatebranco': {
-    name: 'Cookies de Chocolate, Café & Chocolate Branco',
+    name: 'Cookies de Cacau & Café com Recheio de Chocolate Branco',
     description:
-      'Seleção de cookies artesanais com notas de café e pedaços de chocolate branco cremoso.',
+      'Cookie artesanal com sabor de cacau com café e pedaços de chocolate branco.',
     order: 11,
     price: '14,00',
   },
@@ -109,7 +109,7 @@ export const catalogDefaults: Record<string, Partial<CatalogMeta>> = {
   'pudim-grande-nutella': {
     name: 'Pudim de Nutella (Grande)',
     description:
-      'Pudim tamanho família com base de leite condensado e generosas colheradas de Nutella.',
+      'Pudim tamanho família com base de leite condensado e ninho e generosas colheradas de Nutella.',
     order: 16,
     price: '100,00',
   },

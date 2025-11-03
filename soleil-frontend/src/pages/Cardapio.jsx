@@ -39,7 +39,7 @@ const Cardapio = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-soleil-cream pt-28 pb-16 px-4">
+    <div className="min-h-screen bg-soleil-cream pt-28 pb-16 px-4 select-none">
       <div className="container-soleil space-y-10">
         <div className="text-center space-y-4">
           <h1 className="title-cursive text-4xl md:text-5xl text-soleil-dark">
@@ -58,7 +58,7 @@ const Cardapio = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {catalog.map((product, index) => {
             const cover = product.images[0];
             return (

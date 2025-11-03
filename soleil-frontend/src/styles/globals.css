@@ -6,6 +6,8 @@
 @layer base {
   html, body, #root { height: 100%; }
   body { @apply bg-soleil-cream text-soleil-dark antialiased; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  /* Evita o destaque azul de seleção globalmente */
+  ::selection { background: transparent; color: inherit; }
 }
 
 /* Emergent utility classes */
