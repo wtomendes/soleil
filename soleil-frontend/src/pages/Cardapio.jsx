@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Cookie } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
@@ -8,6 +8,35 @@ import { buildWhatsAppLink } from '../config/contact';
 
 const Cardapio = () => {
   const navigate = useNavigate();
+
+  // Sempre começar do topo ao entrar no Cardápio
+  // e não restaurar a rolagem ao voltar do detalhe
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+        // desativa restauração automática do navegador nesta página
+        window.history.scrollRestoration = 'manual';
+      }
+    } catch (e) {
+      // ignore
+    }
+
+    // garante topo ao montar
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+
+    // restaura comportamento padrão ao sair
+    return () => {
+      try {
+        if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+          window.history.scrollRestoration = 'auto';
+        }
+      } catch (e) {
+        // ignore
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-soleil-cream pt-28 pb-16 px-4">
