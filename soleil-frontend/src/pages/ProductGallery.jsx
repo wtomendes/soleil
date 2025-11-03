@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button';
 import { getProductById } from '../data/catalog';
 import { buildWhatsAppLink } from '../config/contact';
 import { getProductDetails } from '../data/productDetails';
+import { CARDAPIO_SCROLL_STORAGE_KEY } from '../constants/storage';
 
 const ProductGallery = () => {
   const { productId } = useParams();

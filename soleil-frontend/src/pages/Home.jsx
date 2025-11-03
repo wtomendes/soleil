@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Phone, Instagram, Cookie, Heart } from 'lucide-react';
 import { products } from '../data/mock';
 import { buildWhatsAppLink, contactInfo } from '../config/contact';
+import { CARDAPIO_SCROLL_STORAGE_KEY } from '../constants/storage';
 
 const Home = () => {
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
@@ -164,6 +165,15 @@ const Home = () => {
           <div className="mt-12 flex justify-center">
             <Link
               to="/cardapio"
+              onClick={() => {
+                try {
+                  sessionStorage.removeItem(CARDAPIO_SCROLL_STORAGE_KEY);
+                  // Force scroll to top immediately
+                  setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
+                } catch (error) {
+                  // ignore storage indisponível
+                }
+              }}
               className="btn-soleil btn-soleil-primary px-10 py-4 text-xl shadow-lg hover:shadow-[0_18px_42px_rgba(63,34,17,0.28)] transition"
             >
               Conheça o cardápio completo
